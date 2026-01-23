@@ -1,15 +1,15 @@
 package com.example.service;
 
-import com.example.dto.SentOrderEvent;
-import org.apache.kafka.common.protocol.types.Field;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+@Slf4j
 @Service
 public class NotificationService {
 
     public void notificationDelivered(String orderId){
 
-        System.out.println("Уведомление отправлено: " + orderId);
+    log.info("Уведомление доставлено, ID заказа={}", orderId);
 
     }
 
